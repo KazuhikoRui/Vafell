@@ -24,7 +24,8 @@ def on_message(data):
 	content = data.message.content
 	vrem = data.message.createdTime[17:19]
 	id = data.message.messageId
-	print(f"{nickname}: {content}: {chatId} : {ban}: {data.message.type}") 
+	if data.message.type != 0:
+		print(f"{nickname}: {content}: {chatId}") 
 	
 	content = str(content).split(" ")
 	if content[0][0] == "!" and content[0][1:].lower() == "ку":
