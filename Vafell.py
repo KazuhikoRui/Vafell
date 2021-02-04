@@ -6,19 +6,12 @@ import os
 
 mail = os.environ.get('V_NAME')
 passw = os.environ.get('V_PASS')
-
-
 client = amino.Client()
 client.login(email=mail, password=passw) 
 sub_client = amino.SubClient(comId='156542274', profile=client.profile) 
-ban = 0
-hm = [0]
-av = []
-nom = 0
+
 
 def on_message(data):
-	global ban
-	global nom
 	chatId = data.message.chatId
 	nickname = data.message.author.nickname
 	content = data.message.content
