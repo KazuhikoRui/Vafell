@@ -7,7 +7,7 @@ passw = os.environ.get('V_PASS')
 
 client = amino.Client()
 client.login(email=mail, password=passw) 
-sub_client = amino.SubClient(comId='156542274', profile=client.profile) 
+subclient = amino.SubClient(comId='156542274', profile=client.profile) 
 print('Bot - on')
 
 def on_message(data):
@@ -22,7 +22,7 @@ def on_message(data):
     
     content = str(content).split(" ")
     if content[0][0] == "!" and content[0][1:].lower() == "ку":
-        sub_client.send_message(message="Дарова, отец...", chatId=chatId)
+        subclient.send_message(message="Дарова, отец...", chatId=chatId)
     
     if (mtype == 100) | (mtype == 109) | (mtype == 107)  | (mtype == 110) | (mtype == 108)  | (mtype == 111) | (mtype == 111):
         if mtype == 100 and content == None:
