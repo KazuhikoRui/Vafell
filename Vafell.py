@@ -14,7 +14,7 @@ def on_message(data):
 	chatId = data.message.chatId
 	nickname = data.message.author.nickname
 	content = data.message.content
-    chatname = sub_client.get_chat_thread(chatId=data.message.chatId).title
+    	chatname = sub_client.get_chat_thread(chatId=data.message.chatId).title
 	id = data.message.messageId
 	print(f"{nickname}: {content} ({chatname} : {data.message.type})") 
 	
