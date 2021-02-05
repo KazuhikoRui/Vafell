@@ -29,8 +29,9 @@ def on_message(data):
                   pass
         else:
             subclient.delete_message(chatId=chatid, messageId=mid)
-            subclient.kick(chatId=chatid, userId = uid, allowRejoin=True)
             subclient.send_message(chatId = chatid, message = 'Не тот чатик, малыш')
+            subclient.kick(chatId=chatid, userId = uid, allowRejoin=True)
+
 methods = []
 for x in client.callbacks.chat_methods:
     methods.append(client.callbacks.event(client.callbacks.chat_methods[x].__name__)(on_message))
