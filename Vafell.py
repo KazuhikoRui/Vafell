@@ -22,7 +22,7 @@ def on_message(data):
     
     content = str(content).split(" ")
     if content[0][0] == "!" and content[0][1:].lower() == "ку":
-        subclient.send_message(message="Дарова, отец...", chatid=chatid)
+        subclient.send_message(message="Дарова, отец...", chatId=chatid)
     
     if (mtype == 100) | (mtype == 109) | (mtype == 107)  | (mtype == 110) | (mtype == 108)  | (mtype == 111) | (mtype == 111):
         if mtype == 100 and content == None:
