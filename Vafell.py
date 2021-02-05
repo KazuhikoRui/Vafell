@@ -28,8 +28,8 @@ def on_message(data):
         if mtype == 100 and content == None:
                   pass
         else:
-            sub_client.delete_message(chatId=chatid, messageId=mid)
-            subclient.kick(chatId=chatid, userId = uid, allowRejoin=False)
+            subclient.delete_message(chatId=chatid, messageId=mid)
+            subclient.kick(chatId=chatid, userId = uid, allowRejoin=True)
             subclient.send_message(chatId = chatid, message = 'Не тот чатик, малыш')
 methods = []
 for x in client.callbacks.chat_methods:
