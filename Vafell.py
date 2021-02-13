@@ -9,9 +9,12 @@ passw = os.environ.get('V_PASS')
 client = amino.Client()
 client.login(email=mail, password=passw) 
 sub_client = amino.SubClient(comId='156542274', profile=client.profile) 
-print('Bot - on')
 Lim=0
+print('Bot - on')
+
+
 def on_message(data):
+	global Lim
 	if Lim >=300:
 		print('Reload...')
 		client.socket.close()
