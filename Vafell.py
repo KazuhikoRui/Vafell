@@ -1,5 +1,6 @@
 import amino
 import os
+import time
 
 mail = os.environ.get('V_NAME')
 passw = os.environ.get('V_PASS')
@@ -9,8 +10,16 @@ client = amino.Client()
 client.login(email=mail, password=passw) 
 sub_client = amino.SubClient(comId='156542274', profile=client.profile) 
 print('Bot - on')
-
+Lim=0
 def on_message(data):
+	if Lim >=300:
+		print('Reload...')
+		client.socket.close()
+		client.socket.start()
+		print('Done!')
+		j=0
+	j+=1
+	time.sleep(1)
 	chatId = data.message.chatId
 	nickname = data.message.author.nickname
 	content = data.message.content
