@@ -17,8 +17,8 @@ def on_message(data):
 		client.socket.close()
 		client.socket.start()
 		print('Done!')
-		j=0
-	j+=1
+		Lim=0
+	Lim+=1
 	time.sleep(1)
 	chatId = data.message.chatId
 	nickname = data.message.author.nickname
