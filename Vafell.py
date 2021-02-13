@@ -22,7 +22,6 @@ def on_message(data):
 		print('Done!')
 		Lim=0
 	Lim+=1
-	time.sleep(1)
 	chatId = data.message.chatId
 	nickname = data.message.author.nickname
 	content = data.message.content
