@@ -21,7 +21,7 @@ def on_message(data):
 	print(f"{nickname}: {content} ({chatname} : {data.message.type})") 
 	
 	content = str(content).split(" ")
-	#if content[0][0] == "!" and content[0][1:].lower() == "ку":
+	#if content[0][0] == "!" and content[0][1:].lower() == "куу":
 	#	sub_client.send_message(message="Дарова, отец...", chatId=chatId)
 	##################################Защита чата##################################################
 
