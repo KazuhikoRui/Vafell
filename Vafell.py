@@ -21,8 +21,8 @@ def on_message(data):
 	print(f"{nickname}: {content} ({chatname} : {data.message.type})") 
 	
 	content = str(content).split(" ")
-	#if content[0][0] == "!" and content[0][1:].lower() == "куу":
-	#	sub_client.send_message(message="Дарова, отец...", chatId=chatId)
+	if content[0][0] == "!" and content[0][1:].lower() == "куу":
+		sub_client.send_message(message="Дарова, отец...", chatId=chatId)
 	##################################Защита чата##################################################
 
 	if data.message.content != None and data.message.type in [1, 50, 58, 57, 59, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 113, 114, 115, 116, 124, 125, 126]:
