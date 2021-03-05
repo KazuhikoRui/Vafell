@@ -30,4 +30,22 @@ def on_message(data):
 		sub_client.delete_message(chatId=data.message.chatId, messageId=data.message.messageId)
 		sub_client.kick(userId=data.message.author.userId, chatId=data.message.chatId, allowRejoin = True)
 
-[client.callbacks.event(client.callbacks.chat_methods[x].__name__)(on_message) for x in client.callbacks.chat_methods]
+methods = []
+for x in client.callbacks.chat_methods:
+	methods.append(client.callbacks.event(client.callbacks.chat_methods[x].__name__)(on_message))
+
+	
+
+##################################
+
+	
+
+while True:
+    if time.time() >= reloadTime:
+        print("# Update Log: Updating socket...")
+        try:
+            client.socket.close()
+            client.socket.start()
+        except:pass
+        print("# Update Log: Updated!")
+        reloadTime += 197
