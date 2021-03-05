@@ -37,7 +37,7 @@ for x in client.callbacks.chat_methods:
 '''
 methods = []
 for x in client.chat_methods:
-	methods.append(client.event(clien.chat_methods[x].__name__)(on_message))	
+	methods.append(client.event(client.chat_methods[x].__name__)(on_message))	
 
 ##################################
 
