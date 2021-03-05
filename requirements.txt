@@ -1,1 +1,4 @@
-Amino.py == 1.2.11.8
+aiohttp
+websockets
+chardet
+amino.py==1.2.10.1
