@@ -8,7 +8,8 @@ passw = os.environ.get('V_PASS')
 
 client = amino.Client()
 client.login(email=mail, password=passw) 
-sub_client = amino.SubClient(comId='156542274', profile=client.profile) 
+sub_client = amino.SubClient(comId='156542274', profile=client.profile)
+reloadTime = time.time() + 197
 print('Bot - on')
 
 
