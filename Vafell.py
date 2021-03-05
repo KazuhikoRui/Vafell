@@ -30,12 +30,14 @@ def on_message(data):
 		#sub_client.send_message(message='Не тот чатик, малыш :)', chatId=data.message.chatId)
 		sub_client.delete_message(chatId=data.message.chatId, messageId=data.message.messageId)
 		sub_client.kick(userId=data.message.author.userId, chatId=data.message.chatId, allowRejoin = True)
-
+'''
 methods = []
 for x in client.callbacks.chat_methods:
 	methods.append(client.callbacks.event(client.callbacks.chat_methods[x].__name__)(on_message))
-
-	
+'''
+methods = []
+for x in client.chat_methods:
+	methods.append(client.event(clien.chat_methods[x].__name__)(on_message))	
 
 ##################################
 
